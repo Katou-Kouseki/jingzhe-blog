@@ -45,6 +45,10 @@
      <content:encoded>{{ (printf "<![CDATA[%s%s]]>" $image .Content)  | safeHTML }}</content:encoded>
       {{- end }}
     </item>
+    <follow_challenge>
+    <feedId>52982633250295857</feedId>
+    <userId>58707550957768704</userId>
+</follow_challenge>
     {{- end }}
     {{ end }}
   </channel>

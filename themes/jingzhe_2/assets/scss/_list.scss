@@ -26,7 +26,7 @@
   line-height: 1.8;
   font-size: 1rem;
   margin: 6px 0;
-  color: var(--erji-color);
+  color: var(--text-content-color);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -38,18 +38,34 @@
   gap: 15px;
   margin-top: 30px;
   @include breakpoint('medium') {
-    display: flex;
+    grid-template-columns: repeat(2, 1fr); 
     flex-wrap: wrap;
+}
+}
+.posts_list_index{
+  display: grid;
+  gap: 12px;
+  margin-bottom: 25px;
+  @include breakpoint('medium') {
+    grid-template-columns: repeat(2, 1fr); 
+    flex-wrap: wrap;
+    gap: 15px;
 }
 }
 .posts_list_article{
   border-radius:4px;
   background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 6px 20px 0px;
+  box-shadow: var(--touy-color);
   padding: 15px;
   @include breakpoint('medium') {
-    padding: 20px;
+    padding: 12px;
 }
+}
+.posts_list_article-index{
+  border-radius:2px;
+  background: #fff;
+  box-shadow: var(--touy-color);
+  padding: 10px;
 }
 .posts-img{
  margin:10px 0;
@@ -85,7 +101,7 @@
   display: flex;
   align-items: center;
   background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 6px 20px 0px;
+  box-shadow: var(--touy-color);
   padding: 15px;
   @include breakpoint('small') {
 		grid-gap: 20px; /* 中间空10px间距 */
@@ -95,6 +111,20 @@
   font-family: var(--font-family-title);
   font-size: 1rem;
   line-height: 1.6;
+}
+.archive-title-index{
+  font-family: var(--font-family-title);
+  font-size: 1rem;
+  line-height: 1.6;
+  @include breakpoint('medium') {
+    font-size: 0.85rem;
+}
+}
+.archive-time-index{
+  font-size: 0.75rem;
+  color: var(--sanji-color);
+  margin-bottom: 2px;
+  font-family: var(--font-family-code);
 }
 .archive-time{
     font-size: 0.85rem;
@@ -118,13 +148,13 @@
 
   // 夜间模式页面样式
   @media (prefers-color-scheme: dark) {
-  .archive-time{
+  .archive-time,.archive-time-index{
         color: var(--erji-color);
       }
-  .posts_list_article,.archives_one{
+  .posts_list_article,.archives_one,.posts_list_article-index{
     background: var(--background-dark-color);
   }
   .posts-description{
-    color: var(--sanji-color);
+    color: #b7b7ab;
   }
     }

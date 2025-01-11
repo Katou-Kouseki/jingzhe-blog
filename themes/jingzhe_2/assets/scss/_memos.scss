@@ -66,7 +66,7 @@
 .bb-timeline{
   margin-bottom: 0;
   @include breakpoint('medium') {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 .datacont p{
@@ -205,14 +205,15 @@
   margin: 0;
 }
 .datacont code{
-  background: #ffe4d4;
-  border: 1px solid #FFBE98;
+  background: var(--background-color);
+  border: 1px solid #e9e2de;
   border-radius: 4px;
   font-size: 1rem;
   padding: 2px 6px 2px 6px;
   font-family: var(--font-family-code);
   margin: 0 4px 0 4px;
   word-wrap: break-word;
+  color: var(--text-highlight-color);
 }
 
 blockquote p{
@@ -298,7 +299,7 @@ blockquote p{
   padding: 15px;
   margin-bottom: 10px;
   @include breakpoint('medium') {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 .memos-editor-content .memos-editor-textarea{
@@ -496,7 +497,12 @@ blockquote p{
   display: flex;
   gap: 20px;
 }
-
+.bb-list-li{
+  border-radius:4px;
+  background: #fff;
+  box-shadow: var(--touy-color);
+  padding: 15px;
+}
 // 页面宽度小于700样式
 @media (max-width:900px){
   .resimg{
@@ -512,10 +518,7 @@ blockquote p{
     margin-top: 10px;
   }
   .bb-list-li{
-    background: #f6f6f6;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 6px;
+    margin-bottom: 15px;
   }
   @media (prefers-color-scheme: dark) {
     .bb-list-li{
@@ -535,11 +538,14 @@ blockquote p{
   }
   .bb-list-ul{
     display: grid;
-    grid-row-gap: 40px; /* 可选项，设置列之间的间隔 */
+    grid-row-gap: 20px; /* 可选项，设置列之间的间隔 */
   }
   }
 // 夜间模式页面样式
 @media (prefers-color-scheme: dark) {
+.bb-list-li{
+  background: var(--background-dark-color);
+}
 .memos-xiala{
   background-color: #282527;
 }
@@ -550,7 +556,7 @@ blockquote p{
   color: var(--erji-color);
 }
 .memos-editor-textarea::placeholder{
-  color: #444;
+  color: #726859;
 }
 .memos-tag-all{
   background: #332E2F;
@@ -559,7 +565,7 @@ blockquote p{
   color: var(--erji-color);
 }
 .memos-editor-body{
-  border: 0.5px solid var(--frame-dark-color);
+  border: 0.5px solid #67534c;
 }
 .memos-tag-dg{
   color: var(--erji-color);
@@ -584,7 +590,7 @@ blockquote p{
   color: var(--erji-color);
 }
 .talks_comments svg:hover{
-  color: var(--sanji-color);
+  color: var(--text-highlight-color);
 }
 .datacont pre,blockquote p{
   background: #2c2829;
@@ -593,8 +599,8 @@ blockquote p{
   color: var(--sanji-color);
 }
 .datacont code{
-  background: #2c2829;
-  border: 1px solid #2c2829;
+  background: var(--background-dark-body-color);
+  border: 1px solid var(--background-dark-body-color);
   color: var(--text-highlight-color);
 }
 blockquote p{
@@ -616,17 +622,17 @@ blockquote p{
   color: var(--text-content-dark-color) !important;
 }
 .editor-selector select {
-  color: #666 !important;
+  color: var(--erji-color) !important;
 }
 .editor-selector::after {
-  border-color: #666 transparent transparent transparent; /* 控制箭头的颜色 */
+  border-color: var(--erji-color) transparent transparent transparent; /* 控制箭头的颜色 */
 }
 
 .memos-editor-content .memos-editor-textarea{
   color: var(--text-content-dark-color);
 }
 .memos-open-api-submit{
-  background: #1A1718 !important;
+  background: var(--background-dark-color) !important;
   color: var(--text-highlight-color) !important;
 }
 .edit-btn,.archive-btn,.delete-btn,.cancel-edit-btn,.memos-image-list{

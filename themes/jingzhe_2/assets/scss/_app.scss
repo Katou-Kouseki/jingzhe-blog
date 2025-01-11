@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 20px 0px;
+  box-shadow: var(--touy-color);
   padding: 15px;
   border-radius: 4px;
   z-index: 1;
@@ -38,7 +38,7 @@
   background: #fff;
   top: 0;
   bottom: 0;
-	color: var(--erji-color);
+	color: var(--text-content-color);
 	font-size: 0.9rem;
 	line-height: 1.4;
 	align-items: center;
@@ -98,7 +98,7 @@
   margin: auto;
   padding-bottom: 20px;
   text-align: center;
-  color: var(--erji-color);
+  color: #666;
 }
 
 //卡片形式
@@ -167,7 +167,7 @@
   color: var(--erji-color);
 }
 .pagetitle{
-  color: var(--sanji-color);
+  color: var(--erji-color);
 }
 .appnote,.apptitle a{
   color: var(--text-content-dark-color);

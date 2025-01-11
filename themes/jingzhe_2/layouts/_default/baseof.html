@@ -6,14 +6,14 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="manifest" href="/suju/ios.json">
   <link rel="icon" href="https://img.koobai.com/koobai.png">
   <link href="/index.xml" title="{{ $.Site.Title }}" type="application/rss+xml">
   <link rel="canonical" href="{{ .Permalink }}" />
 
-  {{ if .Site.IsServer }}
+  {{ if hugo.IsServer }}
   {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
   <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
   {{ else }}
@@ -45,7 +45,7 @@
 
   {{ $js := slice $scripts | resources.Concat "js/bundle.js" }}
 
-  {{ if .Site.IsServer }}
+  {{ if hugo.IsServer }}
   <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
   {{ else }}
   <script type="text/javascript" src="{{ ($js | minify | fingerprint).RelPermalink }}"></script>

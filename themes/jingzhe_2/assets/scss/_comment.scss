@@ -144,6 +144,7 @@ img[atk-emoticon] {
 }
 .atk-main-editor {
   border: 1px solid var(--frame-color)!important;
+  background: transparent !important;
 }
 
 .artalk code{
@@ -153,6 +154,7 @@ img[atk-emoticon] {
   margin: 0 4px !important;
 }
 .atk-main-editor>.atk-textarea-wrap>.atk-textarea{
+  background: transparent !important;
   line-height: 1.6;
 }
 .atk-main-editor>.atk-bottom .atk-state-btn .atk-text-wrap{
@@ -169,12 +171,25 @@ img[atk-emoticon] {
 }
 .atk-main-editor {
   background:  transparent !important;
-  border: 1px solid var(--frame-dark-color)!important;
+  border: 1px solid #67534c !important;
 }
 .atk-textarea {
   color: var(--text-content-dark-color)!important;
   font-size: 15px;
   background:  transparent !important;
+}
+.atk-textarea::placeholder ,.atk-main-editor>.atk-header input::placeholder{
+  color: #726859 !important;
+}
+.atk-comment>.atk-main>.atk-footer .atk-actions>span {
+  color: var(--erji-color) !important;
+}
+.atk-comment>.atk-main>.atk-header .atk-item,.atk-comment>.atk-main>.atk-header .atk-item.atk-reply-at>.atk-nick {
+  color: #726859 !important;
+}
+.atk-list-read-more .atk-list-read-more-inner{
+  background: #67534c !important;
+  border-color: transparent !important;
 }
 .atk-content, .atk-header {
   color: var(--text-content-dark-color) !important;
@@ -185,7 +200,7 @@ img[atk-emoticon] {
 }
 .artalk {
 --at-color-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0), #242021)!important;
---at-color-bg: #1A1718 !important;
+--at-color-bg: var(--background-dark-color) !important;
 --at-color-border: #332D2F !important;
 --at-color-meta:#666 !important;
 --at-color-font:#BBB !important;
@@ -196,7 +211,10 @@ img[atk-emoticon] {
 --at-color-grey:#747474 !important;
 }
 .atk-text, .atk-list-no-comment,.atk-copyright,.atk-copyright a{
-  color: #666!important;
+  color: var(--erji-color)!important;
+}
+.atk-list-read-more {
+  border-top: 1px dashed #67534c !important;
 }
 .atk-item.atk-nick{
   color: var(--text-content-dark-color)!important;
@@ -212,7 +230,7 @@ img[atk-emoticon] {
   color: #999 !important;
 }
 .atk-item.atk-nick a{
-  color: #666 !important;
+  color: var(--erji-color) !important;
 }
 .atk-main-editor>.atk-bottom .atk-state-btn{
   background: var(--background-dark-color) !important;
@@ -239,7 +257,6 @@ img[atk-emoticon] {
   border-radius: 4px;
   padding: 10px 30px;
   font-family: var(--font-family-title);
-  font-weight: bold;
   font-size: 0.85rem;
   border: 0.5px solid var(--text-highlight-color);
   display: inline-block;
